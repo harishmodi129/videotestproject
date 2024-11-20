@@ -63,7 +63,7 @@ const UploadVideo = () => {
     try {
       const response = await axios.post(
         // `http://localhost:5000/api/videos/compress/${uploadId}`
-        `http://184.72.102.98:5000//api/videos/compress/${uploadId}`
+        `http://184.72.102.98:5000/api/videos/compress/${uploadId}`
       );
       toast.info("Compression started. Please wait...");
       setStatus("processing");
@@ -84,7 +84,7 @@ const UploadVideo = () => {
     try {
       const response = await axios.get(
         // `http://localhost:5000/api/videos/status/${uploadId}`
-        `http://184.72.102.98:5000//api/videos/status/${uploadId}`
+        `http://184.72.102.98:5000/api/videos/status/${uploadId}`
       );
       const { status, downloadLink } = response.data;
       console.log(response.data);
